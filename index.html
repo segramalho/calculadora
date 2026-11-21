@@ -3,25 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#10131c" />
+    <meta name="theme-color" content="#0b1020" />
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <main class="calculator" aria-label="Calculadora">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
       <header class="topbar">
-        <span class="brand-mark" aria-hidden="true">⌗</span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="4" stroke="currentColor" stroke-width="1.7"/><path d="M8 8h8M8 12h2m4 0h2M8 16h2m4 0h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
         <div>
-          <p class="eyebrow">FERRAMENTA</p>
-          <h1>Calculadora</h1>
+          <p class="eyebrow">ESPAÇO DE CÁLCULO</p>
+          <h1>Calculadora <span>+</span></h1>
         </div>
-        <span class="status"><i></i> Pronta</span>
+        <span class="status"><i></i> Online</span>
       </header>
 
       <section class="display" aria-live="polite" aria-atomic="true">
+        <div class="display-label"><span>RESULTADO</span><span class="display-spark" aria-hidden="true">✳</span></div>
         <p class="expression" id="expression">&nbsp;</p>
         <output id="result" class="result">0</output>
+        <div class="display-rule"><span></span></div>
       </section>
 
       <section class="keys" aria-label="Teclado">
@@ -43,7 +47,7 @@
         <button data-digit="0">0</button><button data-action="decimal">,</button>
         <button class="equals" data-action="equals" aria-label="Igual">=</button>
       </section>
-      <footer>Use o teclado ou clique nos botões</footer>
+      <footer><span class="keyboard-icon" aria-hidden="true">⌨</span> Use o teclado ou toque nos botões</footer>
     </main>
   </body>
 </html>
